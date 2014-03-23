@@ -1,0 +1,22 @@
+﻿@model FunnelWeb.Web.Views.Wiki.RecentModel
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Posts</title>
+</head>
+<body>
+    <h1>@Model.Title</h1>
+    @if (Model.Results.Any())
+    {
+        <ul>
+            @foreach (var entry in Model.Results)
+            {
+                <li>@Html.Qualify(Html.ActionLink(entry.Title, "Page", "Wiki", new { page = entry.Name }, null))</li>
+            }
+        </ul>
+    }
+</body>
+</html>

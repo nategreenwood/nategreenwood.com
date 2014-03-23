@@ -1,0 +1,116 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnelWeb", "..\src\FunnelWeb\FunnelWeb.csproj", "{3E448C45-F459-45D7-950C-5ABEF926513D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnelWeb.Web", "..\src\FunnelWeb.Web\FunnelWeb.Web.csproj", "{64FAABD6-F45B-4ED1-A3AD-6989C1934405}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnelWeb.Wcf", "..\src\FunnelWeb.Wcf\FunnelWeb.Wcf.csproj", "{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnelWeb.Tools", "..\src\FunnelWeb.Tools\FunnelWeb.Tools.csproj", "{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnelWeb.Extensions.MetaWeblog", "..\src\FunnelWeb.Extensions.MetaWeblog\FunnelWeb.Extensions.MetaWeblog.csproj", "{F891547C-2C79-470E-AE48-3F8813551A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunnelWeb.Extensions.CommentNotification", "..\src\FunnelWeb.Extensions.CommentNotification\FunnelWeb.Extensions.CommentNotification.csproj", "{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ndev.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\src\\FunnelWeb\\FunnelWeb.csproj
+		SccProjectName1 = ../src/FunnelWeb
+		SccLocalPath1 = ..\\src\\FunnelWeb
+		SccProjectUniqueName2 = ..\\src\\FunnelWeb.Web\\FunnelWeb.Web.csproj
+		SccProjectName2 = ../src/FunnelWeb.Web
+		SccLocalPath2 = ..\\src\\FunnelWeb.Web
+		SccProjectUniqueName3 = ..\\src\\FunnelWeb.Wcf\\FunnelWeb.Wcf.csproj
+		SccProjectName3 = ../src/FunnelWeb.Wcf
+		SccLocalPath3 = ..\\src\\FunnelWeb.Wcf
+		SccProjectUniqueName4 = ..\\src\\FunnelWeb.Tools\\FunnelWeb.Tools.csproj
+		SccProjectName4 = ../src/FunnelWeb.Tools
+		SccLocalPath4 = ..\\src\\FunnelWeb.Tools
+		SccProjectUniqueName5 = ..\\src\\FunnelWeb.Extensions.MetaWeblog\\FunnelWeb.Extensions.MetaWeblog.csproj
+		SccProjectName5 = ../src/FunnelWeb.Extensions.MetaWeblog
+		SccLocalPath5 = ..\\src\\FunnelWeb.Extensions.MetaWeblog
+		SccProjectUniqueName6 = ..\\src\\FunnelWeb.Extensions.CommentNotification\\FunnelWeb.Extensions.CommentNotification.csproj
+		SccProjectName6 = ../src/FunnelWeb.Extensions.CommentNotification
+		SccLocalPath6 = ..\\src\\FunnelWeb.Extensions.CommentNotification
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3E448C45-F459-45D7-950C-5ABEF926513D}.Release|x86.ActiveCfg = Release|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{64FAABD6-F45B-4ED1-A3AD-6989C1934405}.Release|x86.ActiveCfg = Release|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CDD2B2A7-413A-49FD-BEC9-F8ECE3B95F11}.Release|x86.ActiveCfg = Release|Any CPU
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Debug|x86.ActiveCfg = Debug|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Debug|x86.Build.0 = Debug|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Release|Any CPU.ActiveCfg = Release|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Release|Mixed Platforms.Build.0 = Release|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Release|x86.ActiveCfg = Release|x86
+		{43F9675D-3702-4B7F-B1D2-FBA2BD33F3AA}.Release|x86.Build.0 = Release|x86
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F891547C-2C79-470E-AE48-3F8813551A61}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5C5EFCF0-454D-42E0-AA89-7F69FB5457BA}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64FAABD6-F45B-4ED1-A3AD-6989C1934405}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FunnelWeb.Web</RootNamespace>
+    <AssemblyName>FunnelWeb.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\Autofac.2.5.2.830\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\Autofac.Mvc3.2.5.2.830\lib\NET40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Wcf, Version=2.5.2.830, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\Autofac.Wcf.2.5.2.830\lib\NET40\Autofac.Integration.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\ClientDependency.1.4.0.0\lib\ClientDependency.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientDependency.Core.Mvc, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\ClientDependency-Mvc.1.4.0.0\lib\ClientDependency.Core.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="DbUp, Version=2.0.67.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\dbup.2.0.67\lib\NET35\DbUp.dll</HintPath>
+    </Reference>
+    <Reference Include="DbUp.SqlCe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\sln\packages\dbup-sqlce.2.0.67\lib\NET35\DbUp.SqlCe.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\sln\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Joel.Net.Akismet">
+      <HintPath>..\..\lib\Akismet\Joel.Net.Akismet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\Assemblies\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcMiniProfiler, Version=1.9.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\MiniProfiler.1.9\lib\net40\MvcMiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\SqlServerCompact.4.0.8482.1\lib\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Information\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Information\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Application\Authentication\FunnelWebRoleProvider.cs" />
+    <Compile Include="Application\Markup\ContentRenderer.cs" />
+    <Compile Include="Application\Markup\HtmlFormatter.cs" />
+    <Compile Include="Application\Markup\IContentEnricher.cs" />
+    <Compile Include="Application\Markup\IContentFormatter.cs" />
+    <Compile Include="Application\Markup\IContentRenderer.cs" />
+    <Compile Include="Application\Markup\MacroEnricher.cs" />
+    <Compile Include="Application\Markup\Macros\MacroView.cs" />
+    <Compile Include="Application\Markup\Macros\IMacroExecutor.cs" />
+    <Compile Include="Application\Markup\Macros\RazorMacroExecutor.cs" />
+    <Compile Include="Application\Markup\MarkdownFormatter.cs" />
+    <Compile Include="Application\Mvc\ActionResults\FeedResult.cs" />
+    <Compile Include="Application\Mvc\ActionResults\XmlActionResult.cs" />
+    <Compile Include="Application\Mvc\FunnelWebControllerFactory.cs" />
+    <Compile Include="Application\Mvc\Binders\ArrayBinder.cs" />
+    <Compile Include="Application\Mvc\Binders\ImplicitAssignmentBinder.cs" />
+    <Compile Include="Application\Mvc\Binders\UploadBinder.cs" />
+    <Compile Include="Application\Extensions\MarkupExtensions.cs" />
+    <Compile Include="Application\Extensions\ViewDataDictionaryExtensions.cs" />
+    <Compile Include="Application\ForceLowercaseUrlHttpModule.cs" />
+    <Compile Include="Application\Mvc\HtmlHelperExtensions.cs" />
+    <Compile Include="Application\Mvc\LowercaseRoute.cs" />
+    <Compile Include="Application\Extensions\MobileExtensions.cs" />
+    <Compile Include="Application\Mvc\MvcExtensions.cs" />
+    <Compile Include="Application\Mvc\RedirectRoute.cs" />
+    <Compile Include="Application\Mvc\RegexRoutes.cs" />
+    <Compile Include="Application\Mvc\RouteCollectionExtension.cs" />
+    <Compile Include="Application\Mvc\ValidUrlAttribute.cs" />
+    <Compile Include="Application\Mvc\ActionResults\PageTemplateActionResult.cs" />
+    <Compile Include="Application\Mvc\WebAbstractionsModule.cs" />
+    <Compile Include="Application\RequireUpdatedDatabaseHttpModule.cs" />
+    <Compile Include="Application\Mvc\FunnelWebViewEngine.cs" />
+    <Compile Include="Application\Themes\IThemeProvider.cs" />
+    <Compile Include="Application\Themes\ThemeProvider.cs" />
+    <Compile Include="Application\Themes\ThemesModule.cs" />
+    <Compile Include="Application\Markup\InputSanitizer.cs" />
+    <Compile Include="Application\Markup\MarkdownNetByBrianJeremy.cs" />
+    <Compile Include="Application\Mime\IMimeTypeLookup.cs" />
+    <Compile Include="Application\Mime\RegistryMimeTypeLookup.cs" />
+    <Compile Include="Application\Authentication\AuthenticationModule.cs" />
+    <Compile Include="Application\Mvc\Binders\BindersModule.cs" />
+    <Compile Include="Application\Mime\MimeSupportModule.cs" />
+    <Content Include="App_Code\HelperPage.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\SqlAuthenticationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\WikiAdminController.cs" />
+    <Compile Include="Areas\Admin\Views\SqlAuthentication\AddRoleModel.cs" />
+    <Compile Include="Areas\Admin\Views\SqlAuthentication\IndexModel.cs" />
+    <Compile Include="Areas\Admin\Views\SqlAuthentication\NewUser.cs" />
+    <Compile Include="Areas\Admin\Views\SqlAuthentication\SetupModel.cs" />
+    <Compile Include="Areas\Admin\Views\Install\ExtensionVersion.cs" />
+    <Compile Include="Controllers\TagController.cs" />
+    <Compile Include="Areas\Admin\Views\Admin\BlogMLImportModel.cs" />
+    <Compile Include="Areas\Admin\Views\Admin\CommentsModel.cs" />
+    <Compile Include="Areas\Admin\Views\Admin\TaskModel.cs" />
+    <Compile Include="Areas\Admin\Views\Admin\TasksModel.cs" />
+    <Compile Include="Areas\Admin\Views\Admin\PageListModel.cs" />
+    <Compile Include="Areas\Admin\Views\Admin\PingbacksModel.cs" />
+    <Compile Include="Areas\Admin\Views\Admin\IndexModel.cs" />
+    <Compile Include="Areas\Admin\Controllers\InstallController.cs" />
+    <Compile Include="Areas\Admin\Views\Install\IndexModel.cs" />
+    <Compile Include="Areas\Admin\Views\Install\UpgradeModel.cs" />
+    <Compile Include="Areas\Admin\Views\Login\LoginModel.cs" />
+    <Compile Include="Areas\Admin\Views\Upload\IndexModel.cs" />
+    <Compile Include="Application\Mvc\Binders\EntryRevisionBinder.cs" />
+    <Compile Include="Application\Mvc\NotFromValuesListConstraint.cs" />
+    <Compile Include="Controllers\TaggedController.cs" />
+    <Compile Include="Application\Extensibility.cs" />
+    <Compile Include="Views\Wiki\SearchModel.cs" />
+    <Compile Include="Views\Wiki\PageModel.cs" />
+    <Compile Include="Views\Wiki\RecentModel.cs" />
+    <Compile Include="Views\Wiki\RevisionsModel.cs" />
+    <Compile Include="Views\Wiki\SiteMapModel.cs" />
+    <Compile Include="Application\Mvc\HyphenatedRouteHandler.cs" />
+    <Compile Include="RoutesModule.cs" />
+    <Compile Include="Application\Spam\SpamModule.cs" />
+    <Compile Include="Application\Markup\MarkupModule.cs" />
+    <Compile Include="Application\CacheStaticFilesHttpModule.cs" />
+    <Compile Include="Application\Pingbacks\PingbackHandler.cs" />
+    <Compile Include="Application\Pingbacks\XmlRpcFaultException.cs" />
+    <Compile Include="Application\Pingbacks\XmlRpcHandler.cs" />
+    <Compile Include="Application\Spam\AkismetSpamChecker.cs" />
+    <Compile Include="Application\Spam\ISpamChecker.cs" />
+    <Compile Include="Application\Mvc\FileUpload.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Controllers\FeedController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ResourceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UploadController.cs" />
+    <Compile Include="Controllers\WikiController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.all.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.base.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Scripts\jquery-1.7-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.js" />
+    <Content Include="Scripts\jquery-1.7.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Views\Shared\_Disqus.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Comments.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Comment.cshtml" />
+    <Content Include="Views\Shared\_EditComments.cshtml" />
+    <None Include="Properties\PublishProfiles\FunnelWeb FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\FunnelWeb SimpleFTP.pubxml" />
+    <None Include="Properties\PublishProfiles\nategreenwood.com - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\nategreenwood.com - Web Deploy.pubxml" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\System.Data.SqlServerCe.Entity\System.Data.SqlServerCe.Entity.dll" />
+    <None Include="_bin_deployableAssemblies\EN\System.Data.SqlServerCe.xml" />
+    <None Include="_bin_deployableAssemblies\System.Data.SqlServerCe.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\busy.gif" />
+    <Content Include="Content\Images\fail.png" />
+    <Content Include="Content\Images\success.png" />
+    <Content Include="Content\Resources\Humans.txt" />
+    <Content Include="Scripts\taggy.js" />
+    <Content Include="Content\themes\base\images\del_sprite_tagComplete.png" />
+    <Content Include="Content\themes\base\Mobile.css" />
+    <Content Include="Content\themes\base\TagEditor.css" />
+    <Content Include="Themes\BoringTheme\Content\Styles\Theme.css" />
+    <Content Include="Themes\Clean\Content\Styles\Theme.css" />
+    <Content Include="Themes\Evolve\Content\Images\background.png" />
+    <Content Include="Themes\Evolve\Content\Styles\Theme.css" />
+    <Content Include="Themes\JakeGinnivan\Content\Styles\appbar.feature.search.rest.png" />
+    <Content Include="Themes\JakeGinnivan\Content\Styles\Colours.css" />
+    <Content Include="Themes\JakeGinnivan\Content\Styles\Theme.css" />
+    <Content Include="Themes\Official\Content\Styles\Theme.css" />
+    <Content Include="Areas\Admin\Views\Admin\PageList.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Tasks.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Task.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\BlogMLImport.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Tags.cshtml" />
+    <Content Include="Views\Shared\_Mobile.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Markdown.cshtml" />
+    <Content Include="Content\themes\base\Admin.css" />
+    <Content Include="Themes\Pastel\Content\Styles\Bar.png" />
+    <Content Include="Themes\Pastel\Content\Styles\Theme.css" />
+    <Content Include="Themes\Twitter\Content\Styles\Background.png" />
+    <Content Include="Themes\Twitter\Content\Styles\Bar.png" />
+    <Content Include="Themes\Twitter\Content\Styles\Theme.css" />
+    <Content Include="Themes\MattHamilton\Content\Styles\Theme.css" />
+    <Content Include="Themes\MattHamilton\Content\Styles\Title.png" />
+    <Content Include="Themes\RainbowAfro\Content\Styles\Bar.png" />
+    <Content Include="Themes\RainbowAfro\Content\Styles\Header.jpg" />
+    <Content Include="Themes\RainbowAfro\Content\Styles\Theme.css" />
+    <Content Include="Areas\Admin\Views\Admin\Comments.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Pingbacks.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Settings.cshtml" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Install\UpgradeReport.cshtml" />
+    <Content Include="Areas\Admin\Views\Install\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
+    <Content Include="Content\Images\editorbuttons.png" />
+    <Content Include="Content\Images\external.png" />
+    <Content Include="Content\Images\FileTypes\bmp.png" />
+    <Content Include="Content\Images\FileTypes\cs.png" />
+    <Content Include="Content\Images\FileTypes\csproj.png" />
+    <Content Include="Content\Images\FileTypes\default.png" />
+    <Content Include="Content\Images\FileTypes\dir.png" />
+    <Content Include="Content\Images\FileTypes\doc.png" />
+    <Content Include="Content\Images\FileTypes\Document.png" />
+    <Content Include="Content\Images\FileTypes\docx.png" />
+    <Content Include="Content\Images\FileTypes\gif.png" />
+    <Content Include="Content\Images\FileTypes\Installer.png" />
+    <Content Include="Content\Images\FileTypes\jpg.png" />
+    <Content Include="Content\Images\FileTypes\Link.png" />
+    <Content Include="Content\Images\FileTypes\png.png" />
+    <Content Include="Content\Images\FileTypes\pps.png" />
+    <Content Include="Content\Images\FileTypes\ppsx.png" />
+    <Content Include="Content\Images\FileTypes\ppt.png" />
+    <Content Include="Content\Images\FileTypes\pptx.png" />
+    <Content Include="Content\Images\FileTypes\rar.png" />
+    <Content Include="Content\Images\FileTypes\sln.png" />
+    <Content Include="Content\Images\FileTypes\tar.png" />
+    <Content Include="Content\Images\FileTypes\xls.png" />
+    <Content Include="Content\Images\FileTypes\xlsx.png" />
+    <Content Include="Content\Images\FileTypes\Zip.png" />
+    <Content Include="Content\Images\title.png" />
+    <Content Include="Content\Images\transparent.gif" />
+    <Content Include="Content\Resources\favicon.png" />
+    <Content Include="Content\Resources\favicon.ico" />
+    <Content Include="Content\Resources\Robots.txt" />
+    <Content Include="Content\Resources\Status.html" />
+    <Content Include="Scripts\jsdate.js" />
+    <Content Include="Scripts\prettify.js" />
+    <Content Include="Scripts\showdown.js" />
+    <Content Include="Scripts\wmd.js" />
+    <Content Include="Scripts\site.js" />
+    <Content Include="Content\themes\base\Base.css" />
+    <Content Include="Themes\AaronPowell\Content\Styles\Theme.css" />
+    <Content Include="Themes\Default\Content\Styles\Theme.css" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\WikiAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="packages.config" />
+    <Content Include="My.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Macros\TwitterStream.cshtml" />
+    <Content Include="Areas\Admin\Views\SqlAuthentication\AddRole.cshtml" />
+    <Content Include="Areas\Admin\Views\SqlAuthentication\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SqlAuthentication\NewAccount.cshtml" />
+    <Content Include="Areas\Admin\Views\SqlAuthentication\Setup.cshtml" />
+    <None Include="Themes\BoringTheme\Views\Wiki\Recent.cshtml" />
+    <Content Include="Areas\Admin\Views\Upload\Index.cshtml" />
+    <Content Include="Views\Wiki\Search.cshtml" />
+    <Content Include="Views\Wiki\Page.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Wiki\Recent.cshtml" />
+    <Content Include="Views\Wiki\Revisions.cshtml" />
+    <Content Include="Views\Wiki\SiteMap.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\PageTemplates\Default.cshtml" />
+    <Content Include="Themes\Twitter\Views\Shared\PageTemplates\Default.cshtml" />
+    <Content Include="Themes\Twitter\Views\Shared\PageTemplates\Homepage.cshtml" />
+    <Content Include="Views\Tagged\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\EntrySummaries.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\TagsList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\EntrySummary.cshtml" />
+    <Content Include="Themes\JakeGinnivan\Views\Shared\DisplayTemplates\EntrySummary.cshtml" />
+    <Content Include="Views\Wiki\Pingbacks.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Public.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FunnelWeb\FunnelWeb.csproj">
+      <Project>{3E448C45-F459-45D7-950C-5ABEF926513D}</Project>
+      <Name>FunnelWeb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Shared\_Private.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Paginator.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Views\Extensions\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53057</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

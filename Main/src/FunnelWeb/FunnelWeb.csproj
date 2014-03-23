@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E448C45-F459-45D7-950C-5ABEF926513D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FunnelWeb</RootNamespace>
+    <AssemblyName>FunnelWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\sln\packages\Autofac.2.5.2.830\lib\NET40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\..\sln\packages\Autofac.2.5.2.830\lib\NET40\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\..\sln\packages\Autofac.Mvc3.2.5.2.830\lib\NET40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="BlogML, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\sln\packages\blogml.2.2.0\lib\BlogML.dll</HintPath>
+    </Reference>
+    <Reference Include="DbUp, Version=2.0.67.0, Culture=neutral, PublicKeyToken=4b419c53bdfd4cbf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\dbup.2.0.67\lib\NET35\DbUp.dll</HintPath>
+    </Reference>
+    <Reference Include="DbUp.SqlCe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\sln\packages\dbup-sqlce.2.0.67\lib\NET35\DbUp.SqlCe.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\sln\packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\sln\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\sln\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcMiniProfiler, Version=1.9.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\MiniProfiler.1.9\lib\net40\MvcMiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\NHibernate.3.2.0.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Validator, Version=1.3.1.4000, Culture=neutral, PublicKeyToken=70154e18752585bd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sln\packages\NHibernate.Validator.1.3.1.4000\lib\Net35\NHibernate.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Validator.Specific">
+      <HintPath>..\..\sln\packages\NHibernate.Validator.1.3.1.4000\lib\Net35\NHibernate.Validator.Specific.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\SqlServerCompact.4.0.8482.1\lib\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Information\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Information\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Authentication\IFunnelWebMembership.cs" />
+    <Compile Include="Authentication\Internal\FormsAuthenticator.cs" />
+    <Compile Include="Authentication\Internal\FormsRoleProvider.cs" />
+    <Compile Include="Authentication\IAuthenticator.cs" />
+    <Compile Include="Authentication\Internal\FormsFunnelWebMembership.cs" />
+    <Compile Include="Authentication\Internal\SqlFunnelWebMembership.cs" />
+    <Compile Include="Authentication\Internal\SqlAuthenticator.cs" />
+    <Compile Include="Authentication\Internal\SqlRoleProvider.cs" />
+    <Compile Include="Authentication\IRoleProvider.cs" />
+    <Compile Include="DatabaseDeployer\ApplicationDatabase.cs" />
+    <Compile Include="DatabaseDeployer\DatabaseModule.cs" />
+    <Compile Include="DatabaseDeployer\DatabaseUpgradeDetector.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\FunnelWebSqlServerCeDriver.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\FunnelWebCe40Dialect.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\ProfiledClientBatchingBatcherFactory.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\ProfiledSqlClientBatchingBatcher.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\ProfiledSqlClientBatchingBatcherFactory.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\ProfiledSqlClientDriver.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\ProfiledSqlDbCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatabaseDeployer\DbProviders\ProfiledSqlDbConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatabaseDeployer\DbProviders\ProfiledSqlDbTransaction.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\ProviderMetaData.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\SqlCeDatabaseProvider.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\SqlDatabaseProvider.cs" />
+    <Compile Include="DatabaseDeployer\DbProviders\IDatabaseProvider.cs" />
+    <Compile Include="DatabaseDeployer\FunnelWebScriptProvider.cs" />
+    <Compile Include="DatabaseDeployer\IApplicationDatabase.cs" />
+    <Compile Include="DatabaseDeployer\IConnectionStringProvider.cs" />
+    <Compile Include="DatabaseDeployer\IDatabaseUpgradeDetector.cs" />
+    <Compile Include="DatabaseDeployer\Infrastructure\FunnelWebJournal.cs" />
+    <Compile Include="DatabaseDeployer\Infrastructure\FunnelWebNHibernateExtensions.cs" />
+    <Compile Include="DatabaseDeployer\ScriptedExtension.cs" />
+    <Compile Include="Eventing\EventingModule.cs" />
+    <Compile Include="Eventing\INotifier.cs" />
+    <Compile Include="ExtensionsModule.cs" />
+    <Compile Include="Filters\FunnelWebRequestAttribute.cs" />
+    <Compile Include="FunnelWebExtensionAttribute.cs" />
+    <Compile Include="FunnelWebExtensionLoadException.asax.cs" />
+    <Compile Include="Utilities\HttpRequestExtensions.cs" />
+    <Compile Include="IFunnelWebExtension.cs" />
+    <Compile Include="IFunnelWebExtensionMetaData.cs" />
+    <Compile Include="IRequireDatabaseScripts.cs" />
+    <Compile Include="Model\Authentication\Mappings\RoleMapping.cs" />
+    <Compile Include="Model\Authentication\Mappings\UserMapping.cs" />
+    <Compile Include="Model\Authentication\Role.cs" />
+    <Compile Include="Model\Authentication\User.cs" />
+    <Compile Include="Model\EntryRevision.cs" />
+    <Compile Include="Model\Mappings\RevisionFilter.cs" />
+    <Compile Include="Model\EntrySummary.cs" />
+    <Compile Include="Model\Strings\EnforcedStringLengthAttribute.cs" />
+    <Compile Include="Mvc\HintSize.cs" />
+    <Compile Include="Mvc\HintSizeAttribute.cs" />
+    <Compile Include="Repositories\Filters.cs" />
+    <Compile Include="Repositories\PagedResult.cs" />
+    <Compile Include="Repositories\Projections\EntrySummaryProjections.cs" />
+    <Compile Include="Repositories\Alias.cs" />
+    <Compile Include="Repositories\EntriesSortColumn.cs" />
+    <Compile Include="Repositories\ICommand.cs" />
+    <Compile Include="Repositories\IQuery.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\NHibernateRepository.cs" />
+    <Compile Include="Repositories\Projections\EntryRevisionProjections.cs" />
+    <Compile Include="Repositories\Queries\EntryByNameQuery.cs" />
+    <Compile Include="Repositories\Queries\EntryByNameAndRevisionQuery.cs" />
+    <Compile Include="Repositories\Queries\FullTextSearchEntriesQuery.cs" />
+    <Compile Include="Repositories\Queries\GetAllCommentsQuery.cs" />
+    <Compile Include="Repositories\Queries\GetCommentsQuery.cs" />
+    <Compile Include="Repositories\Queries\GetEntriesByTagQuery.cs" />
+    <Compile Include="Repositories\Queries\GetEntriesQuery.cs" />
+    <Compile Include="Repositories\IPagedQuery.cs" />
+    <Compile Include="Repositories\Queries\GetFullEntriesQuery.cs" />
+    <Compile Include="Repositories\Queries\GetEntryWithPingbacksQuery.cs" />
+    <Compile Include="Repositories\Queries\GetSpamQuery.cs" />
+    <Compile Include="Repositories\Queries\SimpleSearchEntriesQuery.cs" />
+    <Compile Include="Repositories\Queries\SearchTagsByNameQuery.cs" />
+    <Compile Include="Repositories\Queries\SwitchingSearchEntriesQuery.cs" />
+    <Compile Include="RoutableFunnelWebExtension.cs" />
+    <Compile Include="Settings\IBootstrapSettings.cs" />
+    <Compile Include="Settings\ISettings.cs" />
+    <Compile Include="Settings\SettingsModule.cs" />
+    <Compile Include="Settings\SqlAuthenticationSettings.cs" />
+    <Compile Include="Settings\XmlBootstrapSettings.cs" />
+    <Compile Include="Tasks\TaskModule.cs" />
+    <Compile Include="Tasks\ITask.cs" />
+    <Compile Include="Tasks\ITaskExecutor.cs" />
+    <Compile Include="Model\Mappings\TaskStateMapping.cs" />
+    <Compile Include="Tasks\BlogMLImport.cs" />
+    <Compile Include="Model\Repositories\Internal\TaskStateRepository.cs" />
+    <Compile Include="Model\Repositories\ITaskStateRepository.cs" />
+    <Compile Include="Tasks\TaskExecutor.cs" />
+    <Compile Include="Model\TaskState.cs" />
+    <Compile Include="Model\Tag.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\Entry.cs" />
+    <Compile Include="Model\EntryStatus.cs" />
+    <Compile Include="Model\FileItem.cs" />
+    <Compile Include="Model\Formats.cs" />
+    <Compile Include="Model\Mappings\CommentMapping.cs" />
+    <Compile Include="Model\Mappings\EntryMapping.cs" />
+    <Compile Include="Model\Mappings\TagMapping.cs" />
+    <Compile Include="Model\Mappings\PingbackMapping.cs" />
+    <Compile Include="Model\Mappings\RedirectMapping.cs" />
+    <Compile Include="Model\Mappings\RevisionMapping.cs" />
+    <Compile Include="Model\Mappings\SettingMapping.cs" />
+    <Compile Include="Model\Mappings\UserTypes\PageNameUserType.cs" />
+    <Compile Include="Model\Pingback.cs" />
+    <Compile Include="Model\Redirect.cs" />
+    <Compile Include="Model\Repositories\IAdminRepository.cs" />
+    <Compile Include="Model\Repositories\IFileRepository.cs" />
+    <Compile Include="Model\Repositories\Internal\AdminRepository.cs" />
+    <Compile Include="Model\Repositories\Internal\FileRepository.cs" />
+    <Compile Include="Model\Repositories\RepositoriesModule.cs" />
+    <Compile Include="Model\Revision.cs" />
+    <Compile Include="Model\Setting.cs" />
+    <Compile Include="Model\Strings\EnforcedString.cs" />
+    <Compile Include="Model\Strings\PageName.cs" />
+    <Compile Include="Model\TaskStatus.cs" />
+    <Compile Include="Tasks\TaskStep.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\ConnectionStringProvider.cs" />
+    <Compile Include="Settings\ISettingsProvider.cs" />
+    <Compile Include="Settings\FunnelWebSettings.cs" />
+    <Compile Include="Settings\SettingsProvider.cs" />
+    <Compile Include="Settings\SettingStorageAttribute.cs" />
+    <Compile Include="Settings\StorageLocation.cs" />
+    <Compile Include="Utilities\NumericExtensions.cs" />
+    <Compile Include="Utilities\StreamExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0001.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0002.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0003.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0004.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0005.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0006.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0007.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0008.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0009.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0010.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0011.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0012.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0013.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0014.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0015.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0016.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0017.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0018.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0019.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0020.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0021.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0022.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0023.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0024.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0025.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0026.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0027.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0028.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0001_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0008_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0010_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0016_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0020_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0022_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0023_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0026_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0021_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0029.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0024_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0025_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0027_sqlce.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0030.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0031.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DatabaseDeployer\Scripts\Script0032.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
